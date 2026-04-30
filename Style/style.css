@@ -1,0 +1,385 @@
+:root {
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: var(--rose-50);
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.desserts h1 {
+  margin: 0 0 1em 0;
+}
+
+.desserts .dessert-cards {
+  width: 100%;
+}
+
+.dessert {
+  margin: 0 0 1.8em 0;
+}
+
+.dessert-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  border-radius: 1em;
+}
+
+.dessert-img img {
+  border-radius: 0.8em;
+  width: 100%;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: -1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.5em;
+  background: white;
+  border: 0.1em solid var(--rose-500);
+  border-radius: 2em;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.add-to-cart-txt {
+  margin: 0 0 0 0.5em;
+}
+
+.dessert-details {
+  margin: 2.8em 0 0 0;
+}
+
+.dessert-tag {
+  font-size: 0.9em;
+  color: var(--rose-400);
+}
+
+.dessert-name {
+  margin: 0.5em 0;
+  color: var(--rose-900);
+}
+
+.dessert-price {
+  color: var(--red);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.dessert-img .desktop-img {
+  display: none;
+}
+
+.cart {
+  padding: 2em;
+  border-radius: 0.8em;
+  background: white;
+}
+
+.cart-title {
+  margin: 0 0 2em 0;
+}
+
+.cart-bg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  place-content: center;
+}
+
+.cart-bg img {
+  width: 10em;
+}
+
+.cart-title h3 {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.empty-cart-bg-txt {
+  margin: 1.5em 0 0 0;
+  color: var(--rose-400);
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.add-btns {
+  display: flex;
+}
+
+#cart-amt {
+  /* display: flex; */
+  display: none;
+  justify-content: space-between;
+  padding: 0.7em 1.5em;
+  background: var(--red);
+  border-color: var(--red);
+}
+
+#cart-amt input {
+  width: 3em;
+  background: transparent;
+  border: none;
+  padding: 0.3em 0 0.3em 0;
+  margin: 0 1em;
+  text-align: center;
+  outline: none;
+  pointer-events: none;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1em solid white;
+  padding: 0.6em 0.3em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+}
+.btn:hover path {
+  fill: var(--red);
+}
+
+.max {
+  padding: 0.3em;
+}
+
+.occupied {
+  display: none;
+}
+
+.listed-dessert {
+  margin: 0 0 0.7em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 0.1em solid var(--rose-100);
+  cursor: pointer;
+}
+
+.delete-list-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.1em 0.5em;
+  border: 0.124em solid var(--rose-400);
+  border-radius: 50%;
+  height: 1.8em;
+  color: var(--rose-400);
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.delete-list-btn:hover {
+  color: var(--rose-900);
+  border-color: var(--rose-900);
+}
+.pricing {
+  margin: 0.8em 0 1em 0;
+  display: flex;
+  width: 9em;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--rose-400);
+}
+
+.qnty {
+  color: var(--red);
+}
+
+.item-price {
+  font-weight: 400;
+}
+
+.ttl {
+  margin: 2em 0;
+  border: none;
+  font-weight: 600;
+  color: var(--rose-900);
+}
+.total-order {
+  font-size: 1.3em;
+}
+
+.delivery-msg {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3em;
+  background: var(--rose-50);
+  border-radius: 0.8em;
+  color: var(--rose-900);
+}
+.delivery-msg p {
+  margin: 0 0 0 0.8em;
+  font-size: 0.8em;
+}
+.delivery-msg span {
+  font-weight: 600;
+}
+.order-btn {
+  margin: 2em 0;
+  padding: 1.5em;
+  border: none;
+  outline: none;
+  border-radius: 3em;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  background-color: var(--red);
+}
+
+.confirm-order-btn {
+  margin: 1em 0;
+}
+
+.confirm-order {
+  padding: 5em 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: bottom;
+  justify-content: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.confirm-order .cart {
+  height: fit-content;
+}
+
+.listed-dessert-confirm {
+  display: grid;
+  grid-template-columns: 4em 1fr 4em;
+  column-gap: 0.8em;
+  width: 100%;
+}
+
+.dessert-thumbnail img {
+  width: 3.5em;
+  border-radius: 0.5em;
+}
+
+.listed-dessert-confirm .confirm-p {
+  font-weight: 600;
+}
+
+.listed-dessert-confirm .pricing {
+  justify-content: left;
+}
+
+.listed-dessert-confirm .pricing p {
+  margin: 0 1em 0 0;
+}
+
+.confirm-order .cart-des-lists {
+  border-radius: 0.8em;
+  padding: 1em;
+  background: var(--rose-50);
+}
+
+.confirm-order .ttl {
+  margin: 1em 0;
+}
+
+.confirm-order .order-total {
+  font-weight: 400;
+}
+
+h4 {
+  margin: 0.5em 0 0.2em 0;
+  font-size: 2.8em;
+  font-weight: 600;
+}
+
+.confirm-order .cart-title p {
+  color: var(--rose-400);
+}
+
+.selected {
+  border: 0.3em solid var(--red);
+}
+
+@media (min-width: 890px) {
+  .dessert-img .mobile-img {
+    display: none;
+  }
+
+  .dessert-img .desktop-img {
+    display: block;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 22em;
+    column-gap: 1.8em;
+    margin: 2em;
+    width: 100%;
+  }
+
+  #cart-amt input {
+    width: 3.5em;
+    padding: 0.3em 0 0.3em 1em;
+  }
+
+  .dessert-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+  }
+
+  .confirm-order {
+    align-items: top;
+  }
+}
